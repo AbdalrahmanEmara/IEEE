@@ -1,0 +1,313 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.one {
+    width: 50px;
+    height: 50px;
+    margin: 50px auto;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border: solid 2.5px #efa63a;
+    border-right-color: transparent;
+    position: relative;
+}
+.one::before {
+    content: "";
+    width: 80%;
+    height: 80%;
+    border: solid 2.5px #488ec5;
+    border-top-color: transparent;
+}
+.one::after {
+    content: "";
+    width: 60%;
+    height: 60%;
+    border: solid 2.5px #e73f8e;
+    border-bottom-color: transparent;
+}
+.one::before,
+.one::after {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 50% 50%;
+    -webkit-border-radius: 50% 50%;
+    -moz-border-radius: 50% 50%;
+    -ms-border-radius: 50% 50%;
+    -o-border-radius: 50% 50%;
+}
+.one {
+    animation-name: spin1;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-timing-function: linear;
+}
+.one:hover,
+.one:hover::after,
+.one:hover::before {
+    animation-play-state: paused;
+}
+@keyframes spin1 {
+    to {
+        transform: rotate(1turn);   
+        -webkit-transform: rotate(1turn);
+        -moz-transform: rotate(1turn);
+        -ms-transform: rotate(1turn);
+        -o-transform: rotate(1turn);
+    }
+}
+
+.two {
+    width: 50px;
+    height: 50px;
+    margin: 50px auto;
+    position: relative;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border: 2.5px solid #000000;
+    border-bottom-color: transparent;
+
+    animation-name: spin2;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-play-state: paused;
+}
+.two::before {
+    width: 80%;
+    height: 80%;
+    top: 2px;
+    left: 2px;
+    border: 2.5px solid #f1b53f;
+    animation-name: spin2;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-play-state: paused;
+}
+.two::after {
+    width: 60%;
+    height: 60%;
+    top: 6.5px;
+    left: 6.5px;
+    border: 2.5px solid #478fbb;
+    animation-name: spin2;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-play-state: paused;
+}
+.two::before,
+.two::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%; 
+    border-bottom-color: transparent;
+}
+.two:hover,
+.two:hover::before,
+.two:hover::after {
+    animation-play-state: running;
+}
+@keyframes spin2 {
+    to {
+        transform: rotate(1turn);
+        -webkit-transform: rotate(1turn);
+        -moz-transform: rotate(1turn);
+        -ms-transform: rotate(1turn);
+        -o-transform: rotate(1turn);
+    }
+}
+
+.three {
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin: 50px auto;
+    background-color: #eee;
+    border-radius: 50%;
+    border: 3px solid;
+    border-left-color: transparent;
+    animation-name: spin3;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: reverse;
+}
+@keyframes spin3 {
+    to {
+        transform: rotate(1turn);
+        -webkit-transform: rotate(1turn);
+        -moz-transform: rotate(1turn);
+        -ms-transform: rotate(1turn);
+        -o-transform: rotate(1turn);
+}
+}
+
+:root {
+    --char-color: #323234;
+    --box-color: #f1aa3c;
+}
+
+.four {
+    width: 500px;
+    height: 400px;
+    margin: 50px auto;
+    padding: 10px;
+    background-color: #ccc;
+    display: grid;
+    grid-template-columns: repeat(8, auto);
+    grid-template-rows: repeat(7, auto);
+    gap: 20px;
+    position: relative;
+}
+.four .on {
+    grid-column: 1 / 2;
+    grid-row: 1 / 8;
+}
+.four .tw {
+    grid-column: 1 / 5;
+    grid-row: 1 / 2;
+}
+.four .thr {
+    grid-column: 1 / 5;
+    grid-row: 4 / 5;
+}
+.four .for {
+    grid-column: 1 / 5;
+    grid-row: 7 / 8;
+}
+.four .fiv {
+    grid-column: 5 / 6;
+    grid-row: 1 / 8;
+}
+.four .six {
+    grid-column: 5 / 9;
+    grid-row: 7 / 8;
+    grid-template-columns: repeat(5, auto);
+    grid-template-rows: auto;
+}
+.four div {
+    padding: 10px;
+    display: grid;
+    background-color: var(--char-color);
+    gap: 5px;
+}
+
+.four::before {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: var(--box-color);
+    top: 20px;
+    left: 200px;
+    animation-name: anime-E;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.four::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: var(--box-color);
+    bottom: 20px;
+    right: 20px;
+    animation-name: anime-L;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes anime-L {
+    0% {
+        bottom: 20px;
+        right: 20px;
+    }
+    10.4% {
+        bottom: 20px;
+        right: 197px;
+    }
+    31.2% {
+        bottom: 350px;
+        right: 197px;
+        opacity: 1;
+    }
+    43.7% {
+        bottom: 350px;
+        right: 197px;
+        opacity: 0;
+    }
+    100% {
+        bottom: 350px;
+        right: 197px;
+        opacity: 0;
+    }
+}
+
+@keyframes anime-E {
+    37.5% {
+        top: 20px;
+        left: 200px;
+    }
+    43.75% {
+        top: 20px;
+        left: 20px;
+    }
+    50% {
+        top: 185px;
+        left: 20px;
+    }
+    56.25% {
+        top: 185px;
+        left: 200px;
+    }
+    62.5% {
+        top: 185px;
+        left: 20px;
+    }
+    68.75% {
+        top: 350px;
+        left: 20px;
+    }
+    75% {
+        top: 350px;
+        left: 200px;
+    }
+    81.25% {
+        top: 350px;
+        left: 20px;
+    }
+    87.5% {
+        top: 185px;
+        left: 20px;
+    }
+    93.75% {
+        top: 20px;
+        left: 20px;
+    }
+    100% {
+        top: 20px;
+        left: 200px;
+    }
+}

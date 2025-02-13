@@ -1,0 +1,83 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.assign-two,
+.assign-three {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.assign-two > div,
+.assign-three > div {
+    padding: 10px;
+    margin-bottom: 7px;
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+    background-color: #d1d0d0;
+}
+.pro {
+    text-align: center;
+    font-weight: bold;
+    font-size: 19px;
+    padding: 5px;
+}
+.par {
+    padding: 5px;
+    text-align: center;
+}
+
+/* Mobile */
+/* Small Screens */
+
+@media (max-width: 767px) or (min-width: 768px) {
+    .assign-two > div,
+    .assign-three > div {
+        width: calc(100% - 20px);
+        background-color: #d1d0d0;
+    }
+}
+
+/* Medium Screens : overwrite on media(Small Screens) */
+
+@media (min-width: 992px) {
+    .assign-two > div {
+        width: calc(50% - 20px);
+    }
+    .pro {
+        color: rgb(234 51 35);
+    }
+    .assign-three .one {
+        width: calc(100% - 20px);
+    }
+    .assign-three > div:not(.one) {
+        width: calc(33.7% - 20px);
+    }
+}
+
+/* Large Screens : overwrite on media(Medium Screens) */
+
+@media (min-width: 1200px) {
+    .assign-two > div {
+        width: calc(25% - 20px);
+    }
+    .pro {
+        color: rgb(71 153 142);
+    }
+    .assign-three .one,
+    .assign-three .four {
+        width: calc(100% - 20px);
+    }
+    .assign-three .two,
+    .assign-three .three {
+        width: calc(50% - 20px);
+    }
+}

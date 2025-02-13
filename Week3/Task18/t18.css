@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.one div.main.red {
+    color: red;
+    font-weight: bold;
+}
+
+.two .parent > div:nth-child(2) {
+    color: red;
+    font-weight: bold;
+}
+
+.three .parent .baby:only-child {
+    color: red;
+    font-weight: bold;
+}
+
+.four > :nth-child(n+4):nth-child(-n+6) {
+    color: red;
+    font-weight: bold;
+}
+
+.five div:nth-of-type(2) div {
+    color: red;
+    font-weight: bold;
+}
+
+.six > div:not(.no-need) div:nth-last-of-type(2) {
+    color: red;
+    font-weight: bold;
+}
+
+.seven div:nth-of-type(1) div:nth-of-type(2) {
+    color: red;
+    font-weight: bold;
+}
+
+.eight :not(:first-child, h3, :last-child) {
+    color: red;
+    font-weight: bold;
+}

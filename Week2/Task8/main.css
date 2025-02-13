@@ -1,0 +1,159 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.a1 {
+    position: relative;
+    height: 150px;
+}
+.a1 div {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+
+.a1 .green {
+    background-color: #429488;
+    z-index: 2;
+    top: 10px;
+    left: 10px;
+}
+.a1 .red {
+    background-color: #e15241;
+    z-index: 3;
+    top: 20px;
+    left: 20px;
+}
+.a1 .blue {
+    background-color: #4ba6ee;
+    z-index: 1;
+}
+.a1 .black {
+    background-color: black;
+    top: 10px;
+}
+
+div.a2 {
+    position: relative;
+    margin: 50px auto;    
+    width: 400px;
+    background-color: #eee;
+    padding: 30px;
+    font-size: 20px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: red #4ba6ee;
+}
+div.a2 span {
+    position: absolute;
+    background-color: #4ba6ee;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 5px 16px;
+}
+.a2 span.top-left {
+    top: -20px;
+    left: -20px;
+}
+.a2 span.top-right {
+    top: -20px;
+    right: -20px;
+}
+.a2 span.bottom-left {
+    bottom: -20px;
+    left: -20px;
+}
+.a2 span.bottom-right {
+    bottom: -20px;
+    right: -20px;
+}
+.a2 span.top-left,
+.a2 span.bottom-left {
+    border-right: 2px solid red;
+}
+.a2 span.top-right,
+.a2 span.bottom-right {
+    border-left: 2px solid red;
+}
+
+.a3 {
+    padding: 0;
+    width: 400px;
+    margin: 0 auto;
+}
+ul.a3 li ol {
+    padding: 0 0 0 35px;
+}
+ul.a3 li ul {
+    padding: 0;
+}
+ul.a3 > li {
+    list-style: none;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #eee;
+}
+.a3 ol > li,
+ul.second li {
+    padding: 8px;
+    background-color: white;
+    margin-bottom: 8px;
+}
+.a3 ol > li:first-child,
+ul.second li:first-child {
+    margin-top: 10px;
+}  
+ul.second li {
+    list-style-position: inside;
+}
+.second-ol {
+    list-style-type: upper-roman;
+}
+
+table {
+    width: 700px;
+    margin: auto;
+    margin-top: 50px;
+    background-color: #eee;
+    text-align: center;
+    border-spacing: 0;
+}
+table caption {
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+table thead {
+    background-color: #404040;
+    color: white;
+    font-weight: bold;
+}
+table thead td {
+    padding: 20px;
+}
+table td {
+    border: 1px solid white;
+    border-spacing: 0;
+    padding: 10px 20px;
+}
+table img {
+    width: 80px;
+}
+
+table input {
+    color: white;
+    padding: 7px;
+    border: 0;
+    font-weight: bold;
+}
+table td input.view {
+    background-color: rgb(0, 157, 255);
+    
+}
+table td input.delete {
+    background-color: #d63864;
+}

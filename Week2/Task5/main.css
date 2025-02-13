@@ -1,0 +1,45 @@
+body {
+    font-family: sans-serif;
+}
+
+p {
+    font-size: 30px;
+}
+p.taskone {
+    text-shadow: 2px 2px 0px #e15241,
+                4px 4px 0px #4994ec,
+                6px 6px 0px #9031aa;
+    margin-bottom: 100px;
+}
+
+p.one {
+    text-transform: uppercase;
+}
+p.two {
+    text-transform: capitalize;
+}
+
+div {
+    width: 400px;
+    background-color: #eee;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+div.three {
+    text-wrap: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+a {
+    display: block;
+    padding: 10px 15px;
+    width: fit-content;
+    margin: 0 auto;
+    background-color: #429488;
+    color: white;
+    text-transform: capitalize;
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 5px solid #20504a;
+}

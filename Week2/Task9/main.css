@@ -1,0 +1,85 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.a1 div {
+    width: 300px;
+    height: 60px;
+    margin: 10px auto;
+    background-color: #eee;
+    text-align: center;
+    margin-bottom: 10px;
+    line-height: 55px;
+    font-weight: bold;
+}
+div:empty {
+    background-color: red;
+}
+
+.a2 {
+    background-color: #ccc;
+    width: fit-content;
+    margin: 40px auto;
+    padding: 20px 40px;
+    font-weight: bold;
+}
+.a2::first-letter {
+    padding: 12px 8px;
+    background-color: red;
+    color: white;
+    float: left;
+    margin: -12px 0 0 -50px;
+}
+
+.a3 p {
+    background-color: #ddd;
+    width: fit-content;
+    padding: 20px;
+    margin: 20px auto;
+    border-left: 4px solid #d63864;
+    position: relative;
+}
+.a3 p::before {
+    content: attr(data-person);
+    position: absolute;
+    top: 50%;
+    left: -100px;
+    padding: 10px;
+    background-color: #ddd;
+    transform: translateY(-50%);
+}
+.a3 p::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    top: 22px;
+    left: -20px;
+    border-color: transparent #d63864 transparent transparent;
+    border-style: solid;
+    border-width: 8px;
+}
+
+.a4 {
+    margin-top: 50px;
+}
+.a4 p {
+    width: 400px;
+    margin: 20px auto;
+    padding: 20px 15px;
+    background-color: #ddd;
+    position: relative;
+    counter-increment: number;
+}
+.a4 p::before {
+    content: counter(number);
+    position: absolute;
+    left: -49px;
+    top: 0;
+    color: white;
+    font-weight: bold;
+    padding: 20px;
+    background-color: red;
+}

@@ -1,0 +1,132 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.a1 {
+    width: fit-content;
+    margin: auto;
+}
+.a1 div {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #eee;
+    display: inline-block;
+    margin: 20px;
+    border: 2px solid black;
+    position: relative;
+    counter-increment: number;
+    box-shadow: 5px 5px rgb(0, 149, 255),
+    -5px -5px #d63864;
+}
+.a1 div::before {
+    content: "Element";
+    position: absolute;
+    top: 40px;
+    left: 18px;
+}
+.a1 div::after {
+    content: counter(number);
+    position: absolute;
+    left: 35px;
+    top: -13px;
+    background-color: black;
+    color: white;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    font-weight: bold;
+    padding: 3px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.a2 {
+    width: 100px;
+    height: 100px;
+    margin: 40px auto;
+    background-color: #efefef;
+    border-radius: 10px 50px 10px 50px;
+    box-shadow: 0px 0px 14px 0 inset;
+    -webkit-border-radius: 10px 50px 10px 50px;
+    -moz-border-radius: 10px 50px 10px 50px;
+    -ms-border-radius: 10px 50px 10px 50px;
+    -o-border-radius: 10px 50px 10px 50px;
+    border-top-left-radius: 10px 20px;
+    border-bottom-right-radius: 10px 20px;
+
+}
+
+.a3 {
+    width: 550px;
+    margin: 20px auto;
+}
+.a3 > div {
+    display: inline-block;
+    padding: 20px;
+    width: calc(50% - 30px);
+    margin-right: 20px;
+    background-color: #eee;
+    position: relative;
+}
+.a3 .head {
+    padding: 10px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    background-color: #4ba6ee;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+} 
+.a3 .price {
+    width: 200px;
+    height: 200px;
+    margin-top: 20px;
+    background-color: #ccc;
+    text-align: center;
+    font-size: 35px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    line-height: 200px;
+}
+.a3 .one::before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background-color: #4ba6ee;
+    top: 0;
+    right: -27px;
+}
+.a3 .two {
+    margin: 0 0 0 30px;
+}
+.a3 .two::after {
+    content: "Or";
+    position: absolute;
+    top: 130px;
+    left: -38px;
+    width: 22px;
+    height: 22px;
+    text-align: center;
+    line-height: 22px;
+    font-weight: bold;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    background-color: #4ba6ee;
+    color: white;
+}

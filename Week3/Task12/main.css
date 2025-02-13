@@ -1,0 +1,206 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* Constant Variables */
+:root {
+    --main-padding: 10px;
+    --section-color: #ddd;
+}
+
+.a1 {
+    width: 100px;
+    height: 100px;
+    margin: 10px auto;
+    background-color: #ddd;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: #ec6337;
+    box-shadow: 5px 0 #ec6337,
+                -5px 0  #4ba6ee;
+}
+.parent,
+.parent2,
+.parent3,
+.parent4 {
+    width: 600px;
+    height: 300px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #ddd;
+    display: flex;
+    flex-wrap: wrap;
+}
+.parent {
+    text-align: center;
+    justify-content: space-between;
+    align-content: space-between;
+}
+.parent div {
+    width: calc(95% / 3);
+    height: fit-content;
+    padding: 10px;
+    background-color: #e15241;
+    color: white;
+}
+
+.parent2 {
+    justify-content: space-between;
+}
+.parent2 div {
+    background-color: #667c89;
+    color: white;
+    width: calc(95% / 3);
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.parent2 .one {
+    order: 6;
+    height: 40px;
+    align-self: flex-end;
+}
+.parent2 .two {
+    order: 5;
+}
+.parent2 .three {
+    order: 2;
+    height: 40px;
+}
+.parent2 .four {
+    order: 3;
+}
+.parent2 .five {
+    order: 4;
+}
+.parent2 .six {
+    order: 1;
+}
+
+.parent3 {
+    flex-flow: wrap column;
+    justify-content: space-between;
+}
+.parent3 div {
+    height: calc(95% / 3);
+    background-color: rgb(66 148 136);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.parent3 .one {
+    width: 40px;
+    align-self: flex-end;
+}
+.parent3 .two {
+    width: 50%;
+}
+.parent3 .three {
+    width: 40px;
+    align-self: flex-end;
+}
+
+.parent4 {
+    justify-content: space-between;
+}
+.parent4 div {
+    width: 20%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.parent4 .one {
+    background-color: rgb(241 157 56);
+    order: 2;
+}
+.parent4 .two {
+    background-color: rgb(151 193 92);
+    order: 3;
+    align-self: flex-end;
+}
+.parent4 .three {
+    background-color: rgb(116 86 74);
+    order: 4;
+}
+.parent4 .four {
+    background-color: rgb(97 60 176);
+    order: 1;
+    align-self: flex-end;
+}
+
+.page {
+    width: 800px;
+    height: 500px;
+    margin: 40px auto;
+    padding: var(--main-padding);
+    background-color: #eee;
+    display: flex;
+    flex-flow: wrap row;
+    align-content: space-between;
+}
+.page .header {
+    height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.page .header .logo {
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--section-color);
+}
+.page .header .links {
+    width: 80%;
+    height: 100%;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: var(--section-color);
+}
+.page .header .links li {
+    display: inline-block;
+    margin: 0 10px;
+}
+.page .main-area {
+    height: 70%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.page .main-area > div {
+    padding: var(--main-padding);
+    background-color: var(--section-color);
+}
+.page .main-area .content {
+    width: 65%;
+}
+.page .main-area .sidebar {
+    width: 33%;
+}
+.page .footer {
+    height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--main-padding);
+    background-color: var(--section-color);
+}

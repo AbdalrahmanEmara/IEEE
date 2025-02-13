@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+body {
+}
+
+.layout {
+    background-color: #eee;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 10% 1fr 10%;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas: 
+        "head head head head head" 
+        "section section section section aside" 
+        "foot foot foot foot foot";
+    color: white;
+}
+header {
+    grid-area: head;
+    background-color: #4ba6ee;
+    padding: 20px;
+}
+section {
+    grid-area: section;
+    background-color: #ec6337;
+    padding: 20px;
+}
+aside {
+    grid-area: aside;
+    background-color: #667c89;
+    padding: 20px;
+}
+footer {
+    grid-area: foot;
+    background-color: #429488;
+    padding: 20px;
+}
+
+header::before {
+    content: "Header";
+}
+section::before {
+    content: "Section";
+}
+aside::before {
+    content: "Aside";
+}
+footer::before {
+    content: "Footer";
+}

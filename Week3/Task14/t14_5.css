@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.grid {
+    background-color: #ddd;
+    padding: 20px;
+    width: 800px;
+    height: 400px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+
+  }
+.grid div {
+    background-color: #d63864;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+.one {
+    grid-area: 1 / 1 / 2 / 2;
+}
+.two {
+    grid-area: 1 / 2 / 2 / 3;
+}
+.three {
+    grid-area: 3 / 1 / 4 / 2;
+}
+.four {
+    grid-area: 3 / 2 / 4 / 3;
+}
