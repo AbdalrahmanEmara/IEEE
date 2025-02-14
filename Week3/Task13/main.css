@@ -41,3 +41,23 @@
         ,rgb(73 148 236) 40%, rgb(103 173 91) 40%,rgb(103 173 91) 60%, rgb(214 56 100) 60%
         ,rgb(214 56 100) 80%, rgb(92 62 170) 80%);
 }
+
+.a2 {
+    width: 600px;
+    margin: 40px auto;
+}
+.a2 input {
+    display: block;
+    width: 600px;
+    padding: 20px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: #777;
+    background-color: #eee;
+}
+.a2 input:focus {
+    color: black;
+}
+.a2 input.elzero {
+    caret-color: red;
+} 
