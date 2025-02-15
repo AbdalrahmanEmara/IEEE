@@ -1,0 +1,167 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.grid-1 {
+    background-color: #ddd;
+    padding: 20px;
+    margin: 40px auto;
+    width: 800px;
+    height: 400px;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: 1fr 5fr;
+    gap: 20px;
+}
+.grid-1 div {
+    background-color: #667c89;
+    counter-increment: number;
+    position: relative;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.grid-1 div::before {
+    content: counter(number);
+    position: absolute;
+    left: 160px;
+}
+.grid-1 div::after {
+    content: "Element";
+    position: absolute;
+    left: 70px;
+}
+
+.layout {
+    height: 100vh;
+    display: grid;
+    grid: auto 75% auto / 7fr 3fr;
+    color: white;
+}
+.layout header {
+    background-color: rgb(75 166 238);
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+}
+.layout section {
+    background-color: rgb(236 99 55);
+    grid-area: 2 1 / 3 2;
+}
+.layout aside {
+    background-color: rgb(102 124 137);
+    grid-area: 2 1 / 3 3;
+}
+.layout footer {
+    background-color: rgb(66 148 136);
+    grid-column: 1 / 3;
+}
+.layout header,
+.layout section,
+.layout aside,
+.layout footer {
+    position: relative;
+    padding: 15px;
+}
+.layout header::before,
+.layout section::before,
+.layout aside::before,
+.layout footer::before {
+    content: attr(data-type);
+    position: absolute;
+
+}
+
+.grid-2 {
+    margin: 50px auto;
+    background-color: #ddd;
+    padding: 20px;
+    width: 800px;
+    height: 400px;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    grid-template-columns: auto 1fr 1fr auto;
+    gap: 20px;
+}
+.grid-2 div {
+    background-color: #403f3f;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.grid-2 div:first-of-type {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.grid-3 {
+    margin: 50px auto;
+    background-color: #ddd;
+    padding: 20px;
+    width: 800px;
+    height: 400px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 20px;
+}
+.grid-3 div {
+    background-color: #4994ec;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.grid-3 .one {
+    grid-area: 6 / 1 / 7 / 4;
+}
+.grid-3 .two {
+    grid-area: 2 / 1 / 3 / 3;
+}
+.grid-3 .four {
+    grid-area: 3 / 1 / 4 / 2;
+}
+.grid-3 .five {
+    grid-area: 3 / 2 / 6 / 4;
+}
+.grid-3 .six {
+    grid-area: 4 / 1 / 5 / 2;
+}
+.grid-3 .seven {
+    grid-area: 5 / 1 / 6 / 2;
+}
+.grid-3 .eight {
+    grid-area: 1 / 1 / 2 / 4;
+}
+
+.grid-4 {
+    margin: 50px auto;
+    background-color: #ddd;
+    padding: 20px;
+    width: 800px;
+    height: 400px;
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    grid-template-rows: repeat(2,auto);
+    row-gap: 80%;
+    column-gap: 20px;
+}
+.grid-4 div {
+    background-color: #d63864;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
